@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
 using Reactive.Bindings.Extensions;
+using Xamarin.Forms;
 
 namespace NoPrismMVVM.ViewModels
 {
@@ -18,21 +19,22 @@ namespace NoPrismMVVM.ViewModels
         public ReactiveCommand<string> Button3 { get; } = new ReactiveCommand<string>();
         public ReactiveCommand<string> Button4 { get; } = new ReactiveCommand<string>();
         public ReactiveCommand<string> Button5 { get; } = new ReactiveCommand<string>();
+
+        public ReactiveCommand NextPageButton { get; } = new ReactiveCommand();
         public Model model = new Model();
 
-        public MainPageViewModel()
+        public MainPageViewModel(INavigation navigation)
         {
-
             //Model→ViewModel
             this.Label1 = model.ObserveProperty(x => x.Name).ToReactiveProperty();
-
             //Button
             Button1.Subscribe(x => model.NamePlus(x));
             Button2.Subscribe(x => model.NamePlus(x));
             Button3.Subscribe(x => model.NamePlus(x));
             Button4.Subscribe(x => model.NamePlus(x));
             Button5.Subscribe(x => model.NamePlus(x));
-
+            //Button(ページ遷移)
+            NextPageButton.Subscribe(async _ => await navigation.PushAsync(new Views.NextPageView())); 
         }
     }
 }

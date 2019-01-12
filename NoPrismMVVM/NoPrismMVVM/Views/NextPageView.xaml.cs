@@ -10,12 +10,12 @@ using Xamarin.Forms.Xaml;
 namespace NoPrismMVVM.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MainPageView : ContentPage
+    public partial class NextPageView : ContentPage
     {
-        public MainPageView()
+        public NextPageView()
         {
             InitializeComponent();
-            BindingContext = new ViewModels.MainPageViewModel(this.Navigation); //繋げるViewModelクラスを指定する
+            BindingContext = new ViewModels.NextPageViewModel(); //繋げるViewModelクラスを指定する
         }
     }
 }

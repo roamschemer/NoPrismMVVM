@@ -11,7 +11,7 @@ namespace NoPrismMVVM
         {
             InitializeComponent();
 
-            MainPage = new Views.MainPageView(); //起動時に開くViewクラスを指定する
+            MainPage = new NavigationPage(new Views.MainPageView()); //起動時に開くViewクラスを指定する
         }
 
         protected override void OnStart()
