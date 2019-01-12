@@ -1,17 +1,14 @@
 ﻿using NoPrismMVVM.Models;
 using Reactive.Bindings;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Text;
 using Reactive.Bindings.Extensions;
 using Xamarin.Forms;
+using NoPrismMVVM.Abstracts;
 
 namespace NoPrismMVVM.ViewModels
 {
-    public class MainPageViewModel : INotifyPropertyChanged
+    public class MainPageViewModel : BindableBase
     {
-        public event PropertyChangedEventHandler PropertyChanged; //使わなくても必須
 
         public ReactiveProperty<string> Label1 { get; private set; }
         public ReactiveCommand<string> Button1 { get; } = new ReactiveCommand<string>();

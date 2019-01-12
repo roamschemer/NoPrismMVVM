@@ -1,19 +1,15 @@
-﻿using Reactive.Bindings;
+﻿using NoPrismMVVM.Abstracts;
+using Reactive.Bindings;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Text;
 using Xamarin.Forms;
 
 namespace NoPrismMVVM.ViewModels
 {
-    public class NextPageViewModel : INotifyPropertyChanged
+    public class NextPageViewModel : BindableBase
     {
-        public event PropertyChangedEventHandler PropertyChanged; //使わなくても必須
         public ReactiveCollection<string> ListView { get; set; } = new ReactiveCollection<string>();
         public ReactiveProperty<string> SelectItem { get; set; } = new ReactiveProperty<string>();
         public ReactiveProperty<string> Text { get; set; } = new ReactiveProperty<string>();
-
 
         public NextPageViewModel(INavigation navigation)
         {
