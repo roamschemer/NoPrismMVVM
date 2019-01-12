@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
+using Xamarin.Forms;
 
 namespace NoPrismMVVM.ViewModels
 {
@@ -14,11 +15,11 @@ namespace NoPrismMVVM.ViewModels
         public ReactiveProperty<string> Text { get; set; } = new ReactiveProperty<string>();
 
 
-        public NextPageViewModel()
+        public NextPageViewModel(INavigation navigation)
         {
             ListView = new ReactiveCollection<string>
             {
-                "エビ","黒羽白砂","おむすび","しーちゃん","木村牡丹","えんむすび","千代家ぷりり",
+                "エビのお姉ちゃん","黒羽白砂","おむすび","しーちゃん","木村牡丹","えんむすび","千代家ぷりり",
                 "∞(ムゲン)","ユイきゅん","ボス","ジョア","Ｖーン","やまいけさん"
             };
 

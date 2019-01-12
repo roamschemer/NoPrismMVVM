@@ -15,7 +15,7 @@ namespace NoPrismMVVM.Views
         public NextPageView()
         {
             InitializeComponent();
-            BindingContext = new ViewModels.NextPageViewModel(); //繋げるViewModelクラスを指定する
+            BindingContext = new ViewModels.NextPageViewModel(this.Navigation); //繋げるViewModelクラスを指定する
         }
     }
 }
