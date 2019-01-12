@@ -1,4 +1,4 @@
-﻿using NoPrismMVVM.Abstracts;
+﻿using NoPrismMVVM.Extends;
 
 namespace NoPrismMVVM.Models
 {

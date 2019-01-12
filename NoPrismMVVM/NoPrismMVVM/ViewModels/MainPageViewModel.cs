@@ -3,7 +3,7 @@ using Reactive.Bindings;
 using System;
 using Reactive.Bindings.Extensions;
 using Xamarin.Forms;
-using NoPrismMVVM.Abstracts;
+using NoPrismMVVM.Extends;
 
 namespace NoPrismMVVM.ViewModels
 {

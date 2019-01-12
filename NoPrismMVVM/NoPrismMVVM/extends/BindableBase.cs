@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace NoPrismMVVM.Abstracts
+namespace NoPrismMVVM.Extends
 {
     public class BindableBase : INotifyPropertyChanged
     {
