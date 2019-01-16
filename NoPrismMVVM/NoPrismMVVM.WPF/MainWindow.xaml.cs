@@ -25,6 +25,8 @@ namespace NoPrismMVVM.WPF
             InitializeComponent();
             Xamarin.Forms.Forms.Init();
             LoadApplication(new NoPrismMVVM.App());
+
+            //最小サイズを指定
         }
     }
 }

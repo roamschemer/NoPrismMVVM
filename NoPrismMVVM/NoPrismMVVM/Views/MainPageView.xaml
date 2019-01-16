@@ -8,7 +8,7 @@
         <Button Command="{Binding Button2}" Text="雨ヶ崎笑虹" CommandParameter="雨ヶ崎笑虹"/>
         <Button Command="{Binding Button3}" Text="巻乃もなか" CommandParameter="巻乃もなか"/>
         <Button Command="{Binding Button4}" Text="白乃クロミ" CommandParameter="白乃クロミ"/>
-        <Button Command="{Binding Button5}" Text="結目ユイ･･･えっ･･･なにこの子！かわいい！天使！天使か！？" CommandParameter="結目ユイ"/>
+        <Button Command="{Binding Button5}" Text="結目ユイ" CommandParameter="結目ユイ"/>
         <Label Text="{Binding Label1.Value}" />
         <Button Command="{Binding NextPageButton}" Text="次ページ" />
     </StackLayout>
